@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace frågesport
 {
-    class QuestionCard
+    /*class QuestionCard
     {
         public String question;
         public String answer;
-    }
+    }*/
     class Program
     {
         static void Main(string[] args)
@@ -105,7 +105,7 @@ namespace frågesport
         }
 
 
-        static void uppgift4()
+       /* static void uppgift4()
         {
             List<QuestionCard>min;
             min = new List<QuestionCard>();
@@ -126,6 +126,36 @@ namespace frågesport
             card2.question = "hur gammal är jag?";
             card2.answer = "20";
             min.Add(card2);
+        }*/
+
+
+
+        static void uppgift5()
+        {
+            List<QuestionCard>cards;
+           cards = new List<QuestionCard>();
+           QuestionCard card;
+           card = new QuestionCard("vad heter norges huvudstad?", "oslo");
+           cards.Add(card);
+           card = new QuestionCard("vad heter danmarks huvudstad?", "köpenhamn");
+           cards.Add(card);
+           card = new QuestionCard("vad heter finlands huvudstad?", "helsingfors");
+           cards.Add(card);
+
+           foreach( QuestionCard mycard in cards)
+           {
+             string answer;
+              Console.WriteLine(mycard.GetQuestion());
+             answer = Console.ReadLine();
+             if (mycard.IsCorrect(answer))
+             {
+                 Console.WriteLine("det var rätt");
+             }
+             else
+             {
+                 Console.WriteLine("det var fel");
+             }
         }
     }
+}
 }
