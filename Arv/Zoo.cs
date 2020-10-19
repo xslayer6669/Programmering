@@ -23,13 +23,26 @@ namespace Arv
             cats = new List<Cat>();
             Cat minkatt = new Cat(4);
             cats.Add(minkatt);
-            Cat minkatt1 = new Cat(3)
+            Cat minkatt1 = new Cat(3);
             cats.Add(minkatt1);
-            Cat minkatt2 = new Cat(2)
+            Cat minkatt2 = new Cat(2);
             cats.Add(minkatt2);
             
         }
 
+        public void Run()
+       {
+           foreach(Dog minhund in dogs)
+           {
+               minhund.Act();
+           }
+           foreach(Cat minkatt in cats)
+           {
+               minkatt.Act();
+           }
+       }
+
+       
     }
 
 

@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace Arv
+namespace animal
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Zoo mittzoo = new Zoo();
-            mittzoo.Run();
+           Zoo djurpark = new Zoo();
+            djurpark.Run();
         }
     }
 }
-
